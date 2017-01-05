@@ -2,6 +2,7 @@
 
 #Tool to import users from a .csv file into Active Directory (firstname, lastname, department)
 #Written by Magnus K. Kronberg
+[Console]::OutputEncoding = [Text.UTF8Encoding]::UTF8
 $host.ui.RawUI.WindowTitle = "CSVImport | Magnus K. Kronberg"
 clear
 write "CSVImport | Magnus K. Kronberg"
@@ -32,6 +33,19 @@ foreach ($User in $ADUsers)
     {
 #Create new user and user folder.
         mkdir D:\Users\$Username
+        if(!(Test-Path -Path D:\Users\$Department )){
+            mkdir D:\Users\$Department > $NULL
+            icacls D:\Users\$Department /inheritance:r > $NULL
+        }
+        If (Get-ADGroup -Filter {SamAccountName -eq $Department})
+        {
+        Write-Warning "Group '$Department' already exists, skipping..."
+        }
+        else
+        {
+        New-ADGroup -GroupScope Global -Name $Department | Out-Null
+        }
+
 		New-ADUser `
 			-SamAccountName $Username `
 			-Name "$Firstname $Lastname" `
@@ -43,14 +57,18 @@ foreach ($User in $ADUsers)
             -Department $Department `
             -UserPrincipalName $Username@$SAMend `
             -HomeDirectory \\$servername\Users `
-            -PasswordNeverExpires $True
+            -ChangePasswordAtLogon $True
 	}
+    Add-ADGroupMember -Identity $Department -Members $Username
 #Revoke all permissions, this hides the user folder for all other users
     icacls D:\Users\$Username /inheritance:r > $NULL
 #Give the user access to the folder
     icacls D:\Users\$Username /grant "${Username}:(OI)(CI)F" | Out-Null
 #Give all administrators easy access
-    icacls D:\Users\$Username --% /grant Administrators:(OI)(CI)F /T | out-null
+#    icacls D:\Users\$Username --% /grant Administrators:(OI)(CI)F /T | out-null
+
+    icacls D:\Users\$Department /inheritance:r > $NULL
+    icacls D:\Users\$Department /grant "${Department}:(OI)(CI)F" | Out-Null
 }
 #Check if the common folder for all employees exists, if not it will create it. (named 'Everyone')
 if(!(Test-Path -Path D:\Users\Everyone )){
@@ -65,4 +83,3 @@ write "CSVImport | Magnus K. Kronberg"
 write " "
 write " "
 Write "Done!"
-Write-Host "Press any key to exit"
