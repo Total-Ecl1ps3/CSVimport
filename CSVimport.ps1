@@ -66,7 +66,6 @@ foreach ($User in $ADUsers)
     icacls D:\Users\$Username /grant "${Username}:(OI)(CI)F" | Out-Null
 #Give all administrators easy access
 #    icacls D:\Users\$Username --% /grant Administrators:(OI)(CI)F /T | out-null
-
     icacls D:\Users\$Department /inheritance:r > $NULL
     icacls D:\Users\$Department /grant "${Department}:(OI)(CI)F" | Out-Null
 }
