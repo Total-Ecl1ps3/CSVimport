@@ -1,20 +1,20 @@
 ﻿#ALWAYS BACKUP BEFORE RUNNING THIS TOOL
 
-#Verktøy for importering av brukere inn i Active Directory fra CSV fil (firstname, lastname, department)
-#Laget av Magnus K. Kronberg
+#Tool to import users from a .csv file into Active Directory (firstname, lastname, department)
+#Written by Magnus K. Kronberg
 $host.ui.RawUI.WindowTitle = "CSVImport | Magnus K. Kronberg"
 clear
 write "CSVImport | Magnus K. Kronberg"
 write " "
 write " "
 Import-Module activedirectory
-#Sett instillinger
+#Set variables
 $servername = Read-Host 'Server name'
 $Password1 = Read-Host 'Password'
 $SAMend = Read-Host 'Full domain name'
 $path1 = Read-Host 'CSV file name'
 $ADUsers = import-csv .\$path1.csv -Encoding UTF8
-#Aktiver instillingene
+#Apply variables
 foreach ($User in $ADUsers)
 {
 	$Firstname	= $User.firstname
@@ -23,14 +23,14 @@ foreach ($User in $ADUsers)
 	$Username	= $Firstname.ToLower()+'.'+$Lastname.ToLower()
 	$OU			= $User.department
 	$Password	= $Password1
-#Se om bruker allerede finnes
+#See if user already exists (By username)
 	if (Get-ADUser -F {SamAccountName -eq $Username})
 	{
 		Write-Warning "The user '$Username' already exists, skipping..."
 	}
 	else
     {
-#Lag nye brukere og brukermappe på serveren
+#Create new user and user folder.
         mkdir D:\Users\$Username
 		New-ADUser `
 			-SamAccountName $Username `
@@ -45,19 +45,20 @@ foreach ($User in $ADUsers)
             -HomeDirectory \\$servername\Users `
             -PasswordNeverExpires $True
 	}
-#Ikke tillat andre brukere å se i brukermappen
+#Revoke all permissions, this hides the user folder for all other users
     icacls D:\Users\$Username /inheritance:r > $NULL
-#Gi brukeren tillgang til sin egen mappe
+#Give the user access to the folder
     icacls D:\Users\$Username /grant "${Username}:(OI)(CI)F" | Out-Null
-#Gi tillgang til Administratorer
+#Give all administrators easy access
     icacls D:\Users\$Username --% /grant Administrators:(OI)(CI)F /T | out-null
 }
-#Lag fellesmappe
-if(!(Test-Path -Path D:\Users\Felles )){
-    mkdir D:\Users\Felles > $NULL
+#Check if the common folder for all employees exists, if not it will create it. (named 'Everyone')
+if(!(Test-Path -Path D:\Users\Everyone )){
+    mkdir D:\Users\Everyone > $NULL
 }
-#Gi alle tilgang til fellesmappen
-cacls D:\Users\Felles /E /G Everyone:C > $NULL
+#Give all users access to the common folder
+cacls D:\Users\Everyone /E /G Everyone:C > $NULL
+#Some self promotion at the end
 write " "
 write " "
 write "CSVImport | Magnus K. Kronberg"
