@@ -1,3 +1,5 @@
+Outdated! Update comming soon!
+
 To run the program, you will need to enable unsigned powershell-scripts to run on your server, to do this type:
 'Set-ExecutionPolicy Unrestricted' And press 'Y' to accept. When the program is finished we can re-enable the security protocol with:
 'Set-ExecutionPolicy Restricted' And press 'Y' to accept.
