@@ -1,68 +1,74 @@
-﻿#ALWAYS BACKUP BEFORE RUNNING THIS TOOL
-
-#Tool to import users from a .csv file into Active Directory (firstname, lastname, department)
-#Written by Magnus K. Kronberg
-$host.ui.RawUI.WindowTitle = "CSVImport | Magnus K. Kronberg"
-clear
-write "CSVImport | Magnus K. Kronberg"
-write " "
-write " "
+ [Console]::OutputEncoding = [Text.UTF8Encoding]::UTF8
 Import-Module activedirectory
-#Set variables
-$servername = Read-Host 'Server name'
-$Password1 = Read-Host 'Password'
-$SAMend = Read-Host 'Full domain name'
-$path1 = Read-Host 'CSV file name'
-$ADUsers = import-csv .\$path1.csv -Encoding UTF8
-#Apply variables
+$Servername = Read-Host 'Server name'
+$Readpassword = Read-Host 'Password'
+$Domain = Read-Host 'Domain'
+$OUend = Read-Host 'DC=_____,DC=______'
+$Path1 = Read-Host 'CSV file name | ____.CSV'
+$ADUsers = Import-Csv .\$Path1.csv -Encoding UTF8
 foreach ($User in $ADUsers)
 {
-	$Firstname	= $User.firstname
-	$Lastname	= $User.lastname
-	$Department	= $User.department
-	$Username	= $Firstname.ToLower()+'.'+$Lastname.ToLower()
-	$OU			= $User.department
-	$Password	= $Password1
-#See if user already exists (By username)
-	if (Get-ADUser -F {SamAccountName -eq $Username})
-	{
-		Write-Warning "The user '$Username' already exists, skipping..."
-	}
-	else
+    $Firstnamepre = $User.firstname
+    $Firstname = $Firstnamepre -replace '\s','-' -replace 'æ','e' -replace 'ø','o' -replace 'å','a'
+    $Lastnamepre = $User.lastname
+    $Lastname = $Lastnamepre -replace '\s','-' -replace 'æ','e' -replace 'ø','o' -replace 'å','a'
+    $Department = $User.department
+    $Office = $User.office
+    $Birthdate = $User.birthday
+    $Birthdate1 = $Birthdate.substring(8,2)
+    $Username = $Firstname.ToLower().substring(0,2)+'.'+$Lastname.ToLower().substring(0,3)+$Birthdate1 -replace '\s','-'
+    $OU = $User.department
+    $Password = $Readpassword
+    if (Get-ADUser -F {SamAccountName -eq $Username})
     {
-#Create new user and user folder.
+        Write-Warning "The user '$Username' already exists, skipping..."
+    }
+    else
+    {
         mkdir D:\Users\$Username
-		New-ADUser `
-			-SamAccountName $Username `
-			-Name "$Firstname $Lastname" `
-			-GivenName $Firstname `
-			-Surname $Lastname `
-			-Enabled $True `
-			-DisplayName "$Firstname $Lastname" `
-			-AccountPassword (convertto-securestring $Password -AsPlainText -Force) `
-            -Department $Department `
-            -UserPrincipalName $Username@$SAMend `
-            -HomeDirectory \\$servername\Users `
-            -PasswordNeverExpires $True
-	}
-#Revoke all permissions, this hides the user folder for all other users
-    icacls D:\Users\$Username /inheritance:r > $NULL
-#Give the user access to the folder
-    icacls D:\Users\$Username /grant "${Username}:(OI)(CI)F" | Out-Null
-#Give all administrators easy access
-    icacls D:\Users\$Username --% /grant Administrators:(OI)(CI)F /T | out-null
+        if(!(Test-Path -Path D:\Users\$Department ))
+        {
+            mkdir D:\Users\$Department > $NULL
+            icacls D:\Users\$Department /inheritance:r > $NULL
+        }
+        if (Get-ADOrganizationalUnit -Filter "distinguishedName -eq 'ou=$Department,$OUend'")
+        {
+#            Write-Warning "OU '$Department' already exists, skipping..."
+        }
+        else
+        {
+            New-ADOrganizationalUnit -Name $Department -ProtectedFromAccidentalDeletion $false -Description "$Domain"
+        }
+            If (Get-ADGroup -Filter {SamAccountName -eq $Department})
+        {
+#            Write-Warning "Group '$Department' already exists, skipping..."
+        }
+        else
+        {
+           New-ADGroup -GroupScope Global -Name $Department 
+        }
+        New-ADUser `
+        -SamAccountName $Username `
+        -Name "$Firstnamepre $Lastnamepre" `
+        -GivenName $Firstnamepre `
+        -Surname $Lastnamepre `
+        -Enabled $True `
+        -DisplayName "$Firstnamepre $Lastnamepre" `
+        -AccountPassword (ConvertTo-SecureString $Password -AsPlainText -Force) `
+        -Department $Department `
+        -UserPrincipalName $Username@$Domain `
+        -Path "OU=$department,$OUend" `
+        -HomeDirectory \\$servername\Users `
+        -Description "$Department" `
+        -ChangePasswordAtLogon $True
+    }
+    Add-ADGroupMember -Identity $Department -Members $Username  |Out-Null
+    icacls D:\Users\$Username /inheritance:r |Out-Null
+    icacls D:\Users\$Username /grant "${Username}:(OI)(CI)F" |Out-Null
+    icacls D:\Users\$Department /inheritance:r |Out-Null
+    icacls D:\Users\$Department /grant "${Department}:(OI)(CI)F" |Out-Null
 }
-#Check if the common folder for all employees exists, if not it will create it. (named 'Everyone')
 if(!(Test-Path -Path D:\Users\Everyone )){
-    mkdir D:\Users\Everyone > $NULL
+    mkdir D:\Users\Everyone |Out-Null
 }
-#Give all users access to the common folder
-cacls D:\Users\Everyone /E /G Everyone:C > $NULL
-#Some self promotion at the end
-write " "
-write " "
-write "CSVImport | Magnus K. Kronberg"
-write " "
-write " "
-Write "Done!"
-Write-Host "Press any key to exit"
+cacls D:\Users\Everyone /E /G Everyone:C  
