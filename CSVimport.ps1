@@ -1,9 +1,10 @@
- [Console]::OutputEncoding = [Text.UTF8Encoding]::UTF8
-Import-Module activedirectory
+ Import-Module activedirectory
 $Servername = Read-Host 'Server name'
 $Readpassword = Read-Host 'Password'
 $Domain = Read-Host 'Domain'
-$OUend = Read-Host 'DC=_____,DC=______'
+$DC1,$DC2 = $Domain.Split('.')
+$OUend = "DC=$DC1,DC=$DC2"
+echo "DC = $OUend"
 $Path1 = Read-Host 'CSV file name | ____.CSV'
 $ADUsers = Import-Csv .\$Path1.csv -Encoding UTF8
 foreach ($User in $ADUsers)
