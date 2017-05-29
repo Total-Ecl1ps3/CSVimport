@@ -4,7 +4,12 @@ To run the program, you will need to enable unsigned powershell-scripts to run o
 
 -----------------------------------------------------------------------------------
 
-Move the program (CSVImport.ps1) to the directory you want, and move the .csv file you want to import into the same directory.
+The script needs a "D" drive on the server, with a folder named "Users" on the drive. (D:\Users)
+The "Users" folder needs to be shared with the group "Domain Users", read access is suitable.
+
+-----------------------------------------------------------------------------------
+
+Move the program (CSVImport.ps1) to any directory you want, and move the .csv file you want to import into the same directory.
 Right click the .ps1 file and select 'Run with PowerShell'. If there is a warning select 'Open'. (Or use PowerShell to cd to the directory, write '.\CSVImport.ps1' and press 'R' then 'Enter' to run the program.
 Fill out the fields given to you, end with 'Enter'
   Server name: 'Name of the server you're importing the users into. ie. "Server-DC1"
@@ -12,7 +17,7 @@ Fill out the fields given to you, end with 'Enter'
   Full domain name: The full domain name, ie. 'testdomain.com'
   CSV file name: The name of the file you want to import, ie. For the file 'Employees2017.csv' you want to write 'Employees2017' and press 'Enter'
 The program will now attempt to create the users in AD, and a home folder for each user in D:\Users (ie. 'D:\Users\tom.michaels')
-If there is a folder called 'Everyone' the program will not touch this, however if there is not a folder named 'Everyone' in the Users directory, one will be made and change permission will be granted for all users.
+If there is a folder called 'Everyone' the program will not touch this, however if there is not a folder named 'Everyone' in the Users directory, one will be made and write access will be granted for all domain users.
 
 ------------------------------------------------------------------------------------
 
