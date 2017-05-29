@@ -6,7 +6,7 @@ $DC1,$DC2 = $Domain.Split('.')
 $OUend = "DC=$DC1,DC=$DC2"
 echo "DC = $OUend"
 $Path1 = Read-Host 'CSV file name | ____.CSV'
-$ADUsers = Import-Csv .\$Path1.csv -Encoding UTF8
+$ADUsers = Import-Csv .\$Path1 -Encoding UTF8
 foreach ($User in $ADUsers)
 {
     $Firstnamepre = $User.firstname
