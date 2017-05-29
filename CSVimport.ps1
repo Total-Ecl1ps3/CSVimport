@@ -1,4 +1,4 @@
- Import-Module activedirectory
+Import-Module activedirectory
 $Servername = Read-Host 'Server name'
 $Readpassword = Read-Host 'Password'
 $Domain = Read-Host 'Domain'
