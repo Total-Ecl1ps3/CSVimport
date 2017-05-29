@@ -15,7 +15,7 @@ Fill out the fields given to you, end with 'Enter'
   Server name: 'Name of the server you're importing the users into. ie. "Server-DC1"
   Password: The single use password that the users will have to change on first login.
   Full domain name: The full domain name, ie. 'testdomain.com'
-  CSV file name: The name of the file you want to import, ie. For the file 'Employees2017.csv' you want to write 'Employees2017' and press 'Enter'
+  CSV file name: The name of the file you want to import, ie. For the file 'Employees2017.csv' you want to write 'Employees2017.csv' and press 'Enter'
 The program will now attempt to create the users in AD, and a home folder for each user in D:\Users (ie. 'D:\Users\tom.michaels')
 If there is a folder called 'Everyone' the program will not touch this, however if there is not a folder named 'Everyone' in the Users directory, one will be made and write access will be granted for all domain users.
 
