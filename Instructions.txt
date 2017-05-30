@@ -4,8 +4,12 @@ To run the program, you will need to enable unsigned powershell-scripts to run o
 
 -----------------------------------------------------------------------------------
 
+For full version:
 The script needs a "D" drive on the server, with a folder named "Users" on the drive. (D:\Users)
 The "Users" folder needs to be shared with the group "Domain Users", read access is suitable.
+
+For lite version:
+The Lite version does not create home folders, therefore a "D:\Users" folder is not required.
 
 -----------------------------------------------------------------------------------
 
