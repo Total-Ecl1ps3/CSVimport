@@ -14,10 +14,14 @@ foreach ($User in $ADUsers)
     $Lastnamepre = $User.lastname
     $Lastname = $Lastnamepre -replace '\s','-' -replace 'æ','e' -replace 'ø','o' -replace 'å','a'
     $Department = $User.department
+    if ($Office) {
     $Office = $User.office
-    $Birthdate = $User.birthday
-    $Birthdate1 = $Birthdate.substring(8,2)
-    $Username = $Firstname.ToLower().substring(0,2)+'.'+$Lastname.ToLower().substring(0,3)+$Birthdate1 -replace '\s','-'
+    } else { $Office = ''}
+    $Birthdate = $User."birthday (ISO 8601)"
+    $Birthdate1 = "$Birthdate3"+"$Birthdate2"
+    $Birthdate2 = $User."birthday (ISO 8601)".Substring(5,2)
+    $Birthdate3 = $Birthdate.substring(8,2)
+    $Username = $Firstname.ToLower().substring(0,2)+'.'+$Lastname.ToLower().substring(0,2)+$Birthdate1 -replace '\s','-'
     $OU = $User.department
     $Password = $Readpassword
     if (Get-ADUser -F {SamAccountName -eq $Username})
@@ -61,6 +65,7 @@ foreach ($User in $ADUsers)
         -Path "OU=$department,$OUend" `
         -HomeDirectory \\$servername\Users `
         -Description "$Department" `
+        -Office "$Office" `
         -ChangePasswordAtLogon $True
     }
     Add-ADGroupMember -Identity $Department -Members $Username  |Out-Null
