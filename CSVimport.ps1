@@ -18,9 +18,9 @@ foreach ($User in $ADUsers)
     $Office = $User.office
     } else { $Office = ''}
     $Birthdate = $User."birthday (ISO 8601)"
-    $Birthdate1 = "$Birthdate3"+"$Birthdate2"
     $Birthdate2 = $User."birthday (ISO 8601)".Substring(5,2)
     $Birthdate3 = $Birthdate.substring(8,2)
+    $Birthdate1 = "$Birthdate3"+"$Birthdate2"
     $Username = $Firstname.ToLower().substring(0,2)+'.'+$Lastname.ToLower().substring(0,2)+$Birthdate1 -replace '\s','-'
     $OU = $User.department
     $Password = $Readpassword
