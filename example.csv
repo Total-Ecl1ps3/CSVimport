@@ -1,0 +1,251 @@
+firstname, lastname, birthday,department,office
+Fabian Scott, Reistad, 1950-03-15,Ledelsen,Oslo
+Mikolaj Kenneth, Isdal Abdullahi, 1988-05-14,Ledelsen,Oslo
+Ruth Randi, Sønstebø, 1973-02-11,Ledelsen,Oslo
+Tirill, Ask Iversen, 1982-05-20,Ledelsen,Oslo
+Lycke, Hovdal Braaten, 1996-06-05,Ledelsen,Oslo
+Fabian, Eie, 1957-03-18,Ledelsen,Oslo
+Mateusz Simon, Grønlund, 1954-07-21,Ledelsen,Oslo
+Filip Simon, Drivenes, 1985-02-15,Ledelsen,Oslo
+Kornelius Lars, Bjørkli, 1962-12-06,Ledelsen,Oslo
+Amir, Steinsland, 1952-10-18,Ledelsen,Oslo
+Odin Jan, Mirza Storås, 1973-03-22,HR,Oslo
+Mikal, Kofoed, 1967-08-05,HR,Oslo
+Mariell, Aleksandersen, 1984-07-08,HR,Oslo
+Alba Dorthea, Krane Hegre, 1952-09-25,HR,Bergen
+Fanny Milana, Lade Tønder, 1975-11-01,HR,Trondheim
+Preben, Møgster, 1992-04-10,HMS,Oslo
+Kristupas, Kvinnesland, 1987-08-21,HMS,Bergen
+Lovise Ulla, Vie, 1980-01-20,HMS,Trondheim
+Maximilian Luka, Wang, 1950-03-10,Finans,Trondheim
+Ajla, Vestad Vaage, 1958-07-27,Finans,Trondheim
+Hassan, Søgaard, 1995-10-02,Finans,Trondheim
+Carla, Randen Ulvin, 1987-06-20,Finans,Trondheim
+Iman, Holmen, 1959-12-12,Finans,Trondheim
+Heine Rasmus, Evje, 1963-06-23,Finans,Trondheim
+Augusta Fride, Skrede, 1970-06-16,Finans,Trondheim
+Tilje, Borgen Svenning, 1975-04-15,Finans,Trondheim
+Othilie, Høiseth Robberstad, 1972-12-09,Finans,Trondheim
+Isaac Theo, Todnem Dybdahl, 1965-07-27,Finans,Trondheim
+Kåre Mikkel, Hammersland Tveito, 1988-11-12,Finans,Trondheim
+Vidar Muhammed, Holme, 1957-11-20,Finans,Trondheim
+Alina, Birkeli, 1979-05-07,Økonnomi,Trondheim
+Vida Gina, Dehli, 1978-01-03,Økonnomi,Trondheim
+August Bastian, Rønneberg, 1982-09-03,Økonnomi,Trondheim
+Angelica, Naustdal, 1993-11-27,Økonnomi,Trondheim
+Wojciech Yousef, Lauvås Hauge, 1973-08-06,Økonnomi,Trondheim
+Sebastian, Bergland Nissen, 1971-02-11,Økonnomi,Trondheim
+Conrad Arnas, Ræstad, 1959-11-11,Lønns,Trondheim
+Emilian Jeppe, Haldorsen, 1956-07-20,Lønns,Trondheim
+Eivor Eline, Grønlund, 1996-11-02,IT,Oslo
+Karla Ela, Estensen Tømmerås, 1985-03-16,IT,Oslo
+Aleksander, Røsvik Krogsrud, 1977-03-24,IT,Oslo
+June, Alsaker Jacobsen, 1970-02-01,IT,Oslo
+Yusra, Wanvik, 1977-07-10,IT,Oslo
+Kaja Michelle, Myran, 1989-09-05,IT,Oslo
+Alex, Saeed Vassbotn, 1961-04-22,IT,Oslo
+Alma Savannah, Lilleby, 1984-06-02,IT,Oslo
+Mathea, Ørmen, 1963-10-20,IT,Oslo
+Serina Ellen, Bergman Falk, 1958-06-07,IT,Oslo
+Åshild Nicoline, Wisløff, 1996-11-24,IT,Oslo
+Lilli, Heggdal Guldahl, 1975-01-21,IT,Oslo
+Hanna, Haugsvær, 1984-04-25,IT,Oslo
+Leila, Neset, 1975-08-04,IT,Trondheim
+Cecilia Asta, Myller, 1994-09-24,IT,Trondheim
+Nila Astri, Bu Berntsen, 1966-07-24,IT,Trondheim
+Tarald, Tonning Vassbotn, 1981-06-09,IT,Trondheim
+Einar Marco, Overå, 1969-08-16,IT,Trondheim
+Rakel Aline, Seldal, 1986-05-11,IT,Trondheim
+Abdullahi Ismail, Teigen Holm, 1982-03-15,IT,Trondheim
+Yara Stina, Dahlberg Grøterud, 1969-08-11,IT,Trondheim
+Robert Lyder, Mohammed Strand, 1971-12-04,IT,Trondheim
+Ailo Sean, Haukeland, 1959-11-16,IT,Trondheim
+Alina Idunn, Stadheim Fosser, 1971-11-13,IT,Trondheim
+Emmelin, Stålesen, 1960-03-03,IT,Trondheim
+Malene Alise, Sara Reinholdtsen, 1985-03-05,IT,Trondheim
+Troy Erik, Sinnes Syed, 1982-04-23,IT,Trondheim
+Mia, Juliussen, 1995-12-14,IT,Trondheim
+Lauritz Maximillian, Skjetne, 1987-02-12,IT,Trondheim
+Olivia, Østerbø Sørgård, 1987-10-12,IT,Bergen
+Cornelia Karla, Fykse Blix, 1982-10-08,IT,Bergen
+Mikael, Olavesen Tjemsland, 1994-09-25,IT,Bergen
+Maia, Einarsen Frantzen, 1988-04-26,IT,Bergen
+Mons Samson, Tandberg, 1959-06-24,IT,Bergen
+Joshua, Nordgård Utsi, 1957-10-13,IT,Bergen
+Emelie Carina, Venås Nur, 1976-01-06,IT,Bergen
+Marielle, Gramstad, 1955-06-17,IT,Bergen
+Samira Cecilia, Hernes Hellevik, 1968-08-23,IT,Bergen
+Askil Muhammed, Lende, 1951-04-24,IT,Bergen
+Sannah, Berhane Roos, 1995-12-11,IT,Bergen
+Hermann Joel, Selvik, 1984-03-03,IT,Bergen
+Agathe Laila, Amlie Sundal, 1953-12-06,IT,Bergen
+Frøydis, Holsen, 1979-11-25,IT,Bergen
+Mohammed Emir, Viken, 1954-02-13,IT,Bergen
+Ryan Victor, Raaen, 1979-07-08,IT,Bergen
+Tilde Tonje, Hauglid, 1962-06-01,IT,Bergen
+Christian Edgar, Lindstad Hestetun, 1982-07-11,IT,Bergen
+Alicja Tiril, Hegland, 1995-05-01,IT,Bergen
+Jasmin, Frostad Bendiksen, 1956-09-26,IT,Bergen
+Thora Jasmine, Fauskanger Lødemel, 1995-12-19,IT,Bergen
+Melissa, Tokle Engeseth, 1977-06-02,IT,Bergen
+Vilje, Engeset Brattli, 1951-06-10,IT,Bergen
+Svein Vilmer, Skjerven, 1969-07-20,IT,Bergen
+Sanna, Sæther Vangen, 1976-10-04,IT,Bergen
+Daniela, Mellemstrand, 1982-02-18,IT,Bergen
+Dominik, Holmvik Varhaug, 1978-06-27,IT,Bergen
+Iris, Rohde, 1965-10-09,IT,Bergen
+Trygve Severin, Hermann, 1988-02-10,IT,Bergen
+Erling Mohamed, Heimdal Hordvik, 1982-06-07,IT,Bergen
+Ferdinand, Nguyen, 1992-04-21,IT,Bergen
+James Max, Gjøsund Sveen, 1992-09-06,IT,Bergen
+Lyder, Kjærland Hall, 1984-07-20,Bore,Bergen
+Agnethe Mila, Holtet, 1952-06-20,Bore,Bergen
+Urte, Bjørheim Richardsen, 1985-05-08,Bore,Bergen
+Arin Torbjørn, Kile Nyland, 1968-07-17,Bore,Bergen
+Rikke, Ekroll, 1954-02-25,Bore,Bergen
+Tonje Ines, Helgøy Thøgersen, 1973-12-25,Bore,Bergen
+Muhammed, Glesnes Fjellvang, 1962-03-26,Bore,Bergen
+Oline Adela, Bjørkheim Hatlen, 1952-11-20,Bore,Bergen
+Vidar Silas, Vistnes, 1961-01-09,Bore,Bergen
+Szymon Marvin, Bjørgo Pettersen, 1961-05-11,Bore,Bergen
+Halima, Wiik Minde, 1951-03-07,Bore,Bergen
+Oliver, Fosse Neumann, 1983-10-21,Bore,Bergen
+Samuel, Austad, 1952-09-22,Bore,Bergen
+Pelle Frank, Røkenes Drage, 1961-10-08,Bore,Bergen
+Anette Anniken, Zahl Terjesen, 1963-01-26,Bore,Bergen
+Anita Aria, Rognan, 1987-05-15,Bore,Bergen
+Olivia, Ljosland, 1951-06-13,Bore,Bergen
+Sumaya, Grini, 1965-07-04,Bore,Bergen
+Allan Karsten, Frøseth, 1966-11-11,Bore,Bergen
+Lyder, Vågen Stokland, 1996-04-25,Bore,Bergen
+Selin, Fjellanger Wøien, 1969-04-08,Bore,Bergen
+Sannah, Klein Xu, 1963-06-27,Bore,Bergen
+Nojus Christopher, Undheim, 1959-07-15,Bore,Bergen
+Ajla,Jessen Kalleberg, 1959-08-22,Bore,Bergen
+Abigail,Brenden Flatland, 1968-03-21,Bore,Bergen
+Erik Kamil, Ruud, 1986-12-17,Bore,Bergen
+Jenny Vilja, Strømsnes, 1991-09-09,Bore,Bergen
+Mikal, Nyhuus Grimsmo, 1962-05-27,Bore,Bergen
+Agnar Gaute, Gill, 1992-10-13,Bore,Bergen
+Thor Ole, Myrseth Hobberstad, 1983-05-13,Bore,Bergen
+Maksymilian Ilyas, Wisløff, 1969-04-25,Bore,Bergen
+Alea Vilje, Lyng Vik, 1992-12-16,Bore,Bergen
+Syed, Schøyen Rosland, 1995-01-25,Bore,Bergen
+Zuzanna Kari, Hegdal, 1986-03-13,Bore,Bergen
+Sannah, Lyng Moksnes, 1979-01-20,Bore,Bergen
+Lina, Utne Henden, 1974-06-15,Bore,Bergen
+Eik Nikolas, Langli Rognlien, 1982-12-27,Bore,Bergen
+Torben, Valde, 1984-03-12,Bore,Bergen
+Mads, Ashraf Natås, 1971-05-22,Bore,Bergen
+Eir, Prestegård, 1969-02-03,Bore,Bergen
+Kine, Smestad Skarsvåg, 1981-10-19,Bore,Bergen
+Max, Hægeland, 1988-04-12,Bore,Bergen
+Aria Sigrid, Molvær Vikan, 1982-08-02,Bore,Bergen
+Vilja, Austad Leikvoll, 1975-11-02,Bore,Bergen
+Margit Bertine, Landsverk, 1966-03-04,Bore,Bergen
+Torbjørn Sam, Sunde, 1957-12-02,Bore,Bergen
+Lydia Marina, Shala Krogsæter, 1955-10-07,Bore,Bergen
+Selmer, Nyborg Hannisdal, 1960-04-16,Bore,Bergen
+Lea Edel, Lunden Stavland, 1956-06-21,Bore,Bergen
+Camilla Natalia, Valen, 1956-08-08,Bore,Bergen
+Edgar, Miller, 1969-08-25,Bore,Bergen
+Emrik Jimmy, Bashir Rosenlund, 1958-05-16,Bore,Bergen
+Hans, Bergstrøm, 1965-04-25,Bore,Bergen
+Nikolas, Sollid Sekkingstad, 1950-01-21,Bore,Bergen
+Anneli Idunn, Molstad Sørhus, 1996-06-24,Bore,Bergen
+Filippa Norah, Røren, 1950-04-19,Bore,Bergen
+Ronja, Øvereng, 1987-09-15,Bore,Bergen
+Arthur Ravn, Mardal Ditlefsen, 1995-04-05,Bore,Bergen
+Zander, Høgås, 1976-09-01,Bore,Bergen
+Petra Vera, Schulz Ness, 1973-09-11,Bore,Bergen
+Tilda Cecilia, Grønli Oftedal, 1984-12-18,Bore,Bergen
+Eik, Haakonsen Skjærvik, 1989-05-12,Bore,Bergen
+Sølve, Stave Egeberg, 1958-01-06,Bore,Bergen
+Jennie Halima, Selmer Henningsen, 1986-04-20,Bore,Bergen
+Are, Lofthus Nordberg, 1961-05-03,Bore,Bergen
+Amina, Rikstad Aalberg, 1954-02-20,Bore,Bergen
+Oskar Louis, Hojem Lindal, 1964-08-10,Bore,Bergen
+Audun Michal, Holmsen, 1951-05-01,Bore,Bergen
+Henny Jasmin, Kvernberg Stormoen, 1953-09-24,Bore,Bergen
+Lilly Heidi, Robstad, 1966-07-20,Bore,Bergen
+Wilhelm Yousef, Nørstebø, 1965-10-08,Bore,Bergen
+Marita Nelly, Lindgaard, 1981-11-23,Bore,Bergen
+Cathrine Vårin, Myhrer Knarvik, 1981-04-23,Bore,Bergen
+Daniella, Smørdal Løchen, 1977-10-22,Bore,Bergen
+Storm Anders, Ånestad, 1962-01-15,Bore,Bergen
+Jesper Oskar, Vo Aanstad, 1957-02-02,Bore,Bergen
+Josephine Ingelin, Tronrud, 1966-09-27,Bore,Bergen
+Joanna, Nyland Ervik, 1971-07-21,Bore,Bergen
+Bastian Jeppe, Torjussen Fretheim, 1979-12-08,Bore,Bergen
+Sunniva Tilde, Rakvåg, 1968-03-20,Bore,Bergen
+Nanna, Lyse Lorentsen, 1957-12-12,Bore,Bergen
+Wiktoria Tirill, Henriksen Øen, 1995-08-04,Bore,Bergen
+Ibrahim, Myrstad Utnes, 1981-03-06,Bore,Bergen
+Frida, Hannestad Rognes, 1971-08-18,Bore,Bergen
+Ivan Vebjørn, Brox, 1979-06-24,Bore,Bergen
+Jarand Heine, Bjørgum Tungland, 1950-03-02,Bore,Bergen
+Marvin Henning, Tvete, 1954-09-03,Bore,Bergen
+Selina, Torset Bjørnå, 1986-06-03,Bore,Bergen
+Phillip Øystein, Taksdal, 1975-02-21,Bore,Bergen
+Edvald Audun, Bryne Alvheim, 1993-09-02,Bore,Bergen
+Frida, Mannes Kvistad, 1972-10-25,Bore,Bergen
+Ailo, Natås, 1955-02-07,Let,Bergen
+Igor, Sandbakken, 1986-11-04,Let,Bergen
+Kamilla Live, Bjørvik, 1957-07-20,Let,Bergen
+Christer Emilio, Madland Furu, 1971-05-14,Let,Bergen
+Urte, Skjerven Mjøs, 1986-09-21,Let,Bergen
+Daniella, Tøsse Ueland, 1993-11-05,Let,Bergen
+Anneli Thelma, Vassdal, 1964-01-05,Let,Bergen
+Loke Arvin, Borsheim, 1977-03-12,Let,Bergen
+Angelika, Nicolaisen Bergmann, 1967-12-11,Let,Bergen
+Iben, Nordtveit Jansen, 1973-12-11,Let,Bergen
+Varg, Richardsen, 1983-09-17,Let,Bergen
+Elisa Hailey, Wennevold Schie, 1985-05-08,Let,Bergen
+Heidi Helin, Meling Tyldum, 1957-05-02,Let,Bergen
+Tiril Bertine, Aaberg, 1980-06-04,Let,Bergen
+Camilla, Severinsen, 1982-12-06,Let,Bergen
+Patrick, Tran Gunnerud, 1957-02-21,Let,Bergen
+Cathrine Isa, Valberg Kvalnes, 1986-03-13,Let,Bergen
+Colin, Leistad Helberg, 1969-05-25,Let,Bergen
+Muhammed Viljar, Wessel, 1973-03-05,Let,Bergen
+Kristina Annie, Klungland, 1951-01-05,Let,Bergen
+Ailin, Karimi, 1961-09-19,Let,Bergen
+Andreas Dani, Smith, 1994-03-20,Let,Bergen
+Helmer Allan, Stang Strande, 1976-04-01,Let,Bergen
+Elliott, Løvberg, 1957-07-24,Let,Bergen
+Eir, Sandøy, 1951-08-04,Let,Bergen
+Nova Norah, Gjersøe Lundemo, 1981-04-12,Let,Bergen
+Celin Nicole, Svenning, 1994-11-12,Let,Bergen
+Josephine Katarina, Wærnes, 1973-12-07,Let,Bergen
+Mathilde, Ommundsen Gulliksen, 1989-05-08,Let,Bergen
+Mario, Tiller Skansen, 1956-09-16,Let,Bergen
+Annie Lene, Husby, 1990-10-21,Let,Bergen
+Felicia, Hatlen, 1985-11-25,Let,Bergen
+Markus, Ervik Risøy, 1960-12-12,Let,Bergen
+Yusra Olivia, Nagy, 1961-09-09,Let,Bergen
+Matthew, Kjeldsberg Bruvik, 1967-01-16,Let,Bergen
+Alina, Berthelsen Myrstad, 1975-03-13,Let,Bergen
+Natalie, Bergum Aam, 1984-10-04,Let,Bergen
+Evelyn, Sviland, 1963-03-19,Let,Bergen
+Kristian Nojus, Kleiveland Rise, 1951-08-15,Let,Bergen
+Øystein Edin, Stålesen, 1980-01-11,Let,Bergen
+Matias, Nordmo Bakkeli, 1951-06-09,Let,Bergen
+Amalie, Demir, 1977-09-06,Let,Bergen
+Vincent Didrik, Lindseth, 1988-02-14,Let,Bergen
+Denis Ådne, Hylland Landmark, 1984-10-07,Let,Bergen
+Amalia, Normann Eggum, 1984-04-15,Let,Bergen
+Sophia, Hausken Guttormsen, 1956-03-19,Let,Bergen
+Vilja Jasmin, Grimstad Jonsson, 1955-03-20,Let,Bergen
+Balder Tomas, Weiseth Molde, 1956-05-25,Let,Bergen
+Kamile, Soldal, 1993-04-26,Let,Bergen
+Sundus, Gerhardsen, 1957-05-23,Let,Bergen
+Nelly Halima, Isdal, 1992-03-15,Let,Bergen
+Marthine Liana, Langmo Aanerud, 1955-01-24,Let,Bergen
+Rebekka Milena, Giske, 1967-06-08,Let,Bergen
+Tara Anny, Gjermundsen, 1971-04-05,Let,Bergen
+Milana Victoria, Kryger, 1994-05-04,Let,Bergen
+Alfred, Aden Valla, 1985-12-02,Let,Bergen
+Sumaya, Engstrøm Randen, 1992-10-12,Let,Bergen
+Elliot, Raaen Berget, 1974-04-07,Let,Bergen
+Syed Hjalmar, Abdi Mostad, 1962-04-05,Let,Bergen
+Eirin Tale, Nesland, 1986-02-11,Let,Bergen
