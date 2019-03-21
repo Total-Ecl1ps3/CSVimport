@@ -1,12 +1,25 @@
 Import-Module activedirectory
-$Servername = Read-Host 'Server name'
+echo "Server domain:"
+(Get-WmiObject Win32_computerSystem).Domain
+Echo "Server name:"
+(Get-WmiObject Win32_computerSystem).Name
+$Servername = (Get-WmiObject Win32_computerSystem).Name
 $Readpassword = Read-Host 'Password'
-$Domain = Read-Host 'Domain'
+$Domain = (Get-WmiObject Win32_computerSystem).Domain
 $DC1,$DC2 = $Domain.Split('.')
 $OUend = "DC=$DC1,DC=$DC2"
 echo "DC = $OUend"
-$Path1 = Read-Host 'CSV file name | ____.CSV'
-$ADUsers = Import-Csv .\$Path1 -Encoding UTF8
+Add-type -AssemblyName System.windows.forms
+
+$Path = New-Object System.Windows.Forms.OpenFileDialog -Property @{ 
+    InitialDirectory = [Environment]::GetFolderPath('Desktop')
+    Filter = 'CSV files (*.csv)|*.csv'  
+    }
+$null = $path.ShowDialog()
+$Path1 = $path.FileName
+echo "CSV file:"
+$path1
+$ADUsers = Import-Csv $Path1 -Encoding UTF8
 foreach ($User in $ADUsers)
 {
     $Firstnamepre = $User.firstname
