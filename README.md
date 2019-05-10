@@ -1,4 +1,4 @@
-# CSVimport V1.0
+# CSVimport V1.5
 Tool to easily import users into AD from a CSV file
 
 ### Lite VS Regular version
